@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNS Connectivity Incident Resolution | Vic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        header {
+            background: #1e293b;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 { color: #38bdf8; }
+        h2 { color: #22d3ee; }
+        section {
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        ul {
+            line-height: 1.6;
+        }
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>DNS Connectivity Incident Resolution</h1>
+    <p>Root Cause Analysis • Authentication & Name Resolution Troubleshooting</p>
+</header>
+
+<section>
+
+    <div class="card">
+        <h2>Incident Overview</h2>
+        <p>
+            Investigated and resolved DNS-related connectivity issues affecting two domain-joined workstations. 
+            Users were able to ping external IP addresses (e.g., 8.8.8.8) but were unable to resolve domain names 
+            such as google.com, indicating a name resolution failure.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Initial Symptoms</h2>
+        <ul>
+            <li>Successful ping to external IP addresses</li>
+            <li>Failure when pinging domain names</li>
+            <li>Intermittent domain connectivity issues</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Root Cause Analysis</h2>
+        <ul>
+            <li>Identified incorrect DNS server configuration on affected machines</li>
+            <li>Confirmed devices were not properly pointing to the Domain Controller for DNS</li>
+            <li>Verified issue through network adapter inspection and resolution testing</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Resolution</h2>
+        <ul>
+            <li>Obtained local administrator privileges</li>
+            <li>Manually configured network adapter to use the correct internal DNS server</li>
+            <li>Validated resolution using domain name testing and connectivity checks</li>
+            <li>Restored full network and authentication functionality</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Skills Demonstrated</h2>
+        <ul>
+            <li>DNS troubleshooting and name resolution diagnostics</li>
+            <li>Root cause analysis</li>
+            <li>Windows network configuration</li>
+            <li>Authentication workflow understanding</li>
+            <li>Minimized user downtime through targeted remediation</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <p><a href="index.html">← Back to Home</a></p>
+    </div>
+
+</section>
+
+</body>
+</html>
