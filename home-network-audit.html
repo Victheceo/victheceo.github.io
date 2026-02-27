@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Network Security Assessment | Vic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        header {
+            background: #1e293b;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 { color: #38bdf8; }
+        h2 { color: #22d3ee; }
+        section {
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #334155;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #334155;
+        }
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Home Network Security Assessment</h1>
+    <p>Kali Linux • Nmap • Internal Enumeration</p>
+</header>
+
+<section>
+
+    <div class="card">
+        <h2>Project Overview</h2>
+        <p>
+            Conducted an authorized internal security assessment of a private Class C network 
+            (192.168.X.0/24) using Kali Linux in a bridged VMware environment. The objective 
+            was to identify active hosts, enumerate exposed services on the gateway, and 
+            assess potential hardening opportunities.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Tools Used</h2>
+        <ul>
+            <li>Kali Linux (VMware - Bridged Mode)</li>
+            <li>Nmap</li>
+            <li>Linux networking commands (ip a, ip route)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Methodology</h2>
+        <ul>
+            <li>Identified network range using <strong>ip a</strong> and <strong>ip route</strong></li>
+            <li>Performed host discovery: <strong>nmap -sn 192.168.X.0/24</strong></li>
+            <li>Enumerated gateway services: <strong>nmap -sS -sV -O 192.168.X.1</strong></li>
+            <li>Analyzed exposed services and classified risk levels</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Findings</h2>
+
+        <table>
+            <tr>
+                <th>Port</th>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Risk Level</th>
+            </tr>
+            <tr>
+                <td>53</td>
+                <td>DNS (dnsmasq)</td>
+                <td>Internal name resolution service</td>
+                <td>Low</td>
+            </tr>
+            <tr>
+                <td>80</td>
+                <td>HTTP</td>
+                <td>Router admin interface (unencrypted)</td>
+                <td>Medium</td>
+            </tr>
+            <tr>
+                <td>443</td>
+                <td>HTTPS</td>
+                <td>Secure router admin interface</td>
+                <td>Low</td>
+            </tr>
+            <tr>
+                <td>49152</td>
+                <td>UPnP</td>
+                <td>Automatic port mapping service</td>
+                <td>Medium–High</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="card">
+        <h2>Security Analysis</h2>
+        <p>
+            No Telnet (23) or SSH (22) services were exposed. The primary hardening opportunity 
+            identified was the presence of an active UPnP service and an HTTP management 
+            interface alongside HTTPS. Overall exposure was limited to internal services 
+            within the subnet.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Recommendations</h2>
+        <ul>
+            <li>Disable UPnP if not required</li>
+            <li>Restrict router management to HTTPS only</li>
+            <li>Confirm remote administration is disabled</li>
+            <li>Maintain firmware updates</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <p><a href="index.html">← Back to Home</a></p>
+    </div>
+
+</section>
+
+</body>
+</html>
