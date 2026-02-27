@@ -4,68 +4,144 @@
     <title>Victoria Francis | Cybersecurity Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
             background-color: #0f172a;
             color: #e2e8f0;
         }
+
+        nav {
+            background-color: #111827;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+            margin: 0;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
         header {
-            background: #1e293b;
-            padding: 20px;
             text-align: center;
+            padding: 80px 20px;
         }
-        h1 { color: #38bdf8; }
-        h2 { color: #22d3ee; }
+
+        header h1 {
+            font-size: 42px;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #94a3b8;
+        }
+
         section {
-            padding: 40px;
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
+            padding: 40px 20px;
         }
+
         .card {
-            background: #1e293b;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
+            background-color: #1e293b;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            transition: transform 0.2s ease;
         }
-        a {
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #22d3ee;
+            margin-top: 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        a.project-link {
             color: #38bdf8;
             text-decoration: none;
+            font-weight: bold;
+        }
+
+        a.project-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #111827;
+            color: #64748b;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
+<nav>
+    <h2>Victoria Francis</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
 <header>
-    <h1>Victoria Francis | Cybersecurity Portfolio</h1>
-    <p>Network Security • Help Desk • SOC-Focused Labs</p>
+    <h1>Cybersecurity Portfolio</h1>
+    <p>Network Security • Active Directory • SOC-Focused Labs</p>
 </header>
 
-<section>
-
+<section id="about">
     <div class="card">
         <h2>About Me</h2>
         <p>
             Cybersecurity-focused IT professional graduating in April 2026 with hands-on experience in network security assessments, Active Directory administration, DNS troubleshooting, and firewall configuration labs. Experienced in building and documenting structured lab environments, including internal network audits using Kali Linux and Nmap, user and group management in AD, and system hardening practices. Focused on developing practical skills aligned with SOC and security operations roles.
         </p>
     </div>
+</section>
 
+<section id="projects">
     <div class="card">
         <h2>Projects</h2>
-<ul>
-    <li><a href="home-network-audit.html">Home Network Security Assessment</a></li>
-    <li><a href="active-directory-lab.html">Active Directory Enterprise Lab</a></li>
-    <li><a href="dns-connectivity-incident.html">DNS Connectivity Incident Resolution</a></li>
-
-</ul>        
+        <ul>
+            <li><a class="project-link" href="home-network-audit.html">Home Network Security Assessment</a></li>
+            <li><a class="project-link" href="active-directory-lab.html">Active Directory Enterprise Lab</a></li>
+            <li><a class="project-link" href="dns-connectivity-incident.html">DNS Connectivity Incident Resolution</a></li>
+        </ul>
     </div>
+</section>
 
+<section id="contact">
     <div class="card">
         <h2>Contact</h2>
         <p>Email: Victoriafrancis182@gmail.com</p>
         <p>Phone: 437-566-3737</p>
     </div>
-
 </section>
+
+<footer>
+    © 2026 Victoria Francis | Cybersecurity Portfolio
+</footer>
 
 </body>
 </html>
